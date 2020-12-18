@@ -70,5 +70,5 @@ function add(text: string): number {
   return text
     .replace("\n", ',')
     .split(",")
-    .reduce((a: number, b: string) => a + parseFloat(b || 0), 0);
+    .reduce((a: number, b: string) => a + parseFloat(b || '0'), 0);
 }
