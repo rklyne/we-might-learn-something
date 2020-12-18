@@ -14,8 +14,10 @@ describe("a calculator", () => {
   it("should return zero for the empty string", () => {
     expect(add("")).toBe(0);
   })
-  it("should return 1 given 1", () => {
-    expect(add("1")).toBe(1);
+  describe("single numbers", () => {
+    it("should return 1 given 1", () => {
+      expect(add("1")).toBe(1);
+    })
   })
 })
 
