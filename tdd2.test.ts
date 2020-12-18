@@ -63,6 +63,9 @@ describe("a calculator", () => {
     it("should return 1 for '1,\n'", () => {
       expect(add('1,\n')).toBe(1);
     })
+    it("should return 20 for '1\n6\n10\n3'", () => {
+        expect(add('1\n6\n10\n3')).toBe(20);
+    })
   })
 });
 
