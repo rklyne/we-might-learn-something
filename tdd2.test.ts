@@ -33,6 +33,11 @@ describe("a calculator", () => {
       expect(add("2,2")).toBe(4);
     });
   });
+  describe("5 numbers", () => {
+    it("should return 15 for '1,2,3,4,5'", () => {
+      expect(add('1,2,3,4,5')).toBe(15);
+    })
+  })
 });
 
 function add(text: string): number {
