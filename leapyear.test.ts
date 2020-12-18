@@ -12,27 +12,18 @@ import { is_leapyear } from './leapyear';
 
 describe("leap years", () => {
   describe("year divisible by 400 is a leap year", () => {
-    it("should return true for 400", () => {
-      expect(is_leapyear(400)).toBe(true);
-    })
-    it("should return true for 2000", () => {
-      expect(is_leapyear(2000)).toBe(true);
+    it.each([[400], [2000]])('%s is a leap year', (n) => {
+      expect(is_leapyear(n)).toBe(true);
     })
   })
   describe("year divisible by 100 is not a leap year", () => {
-    it("should return false for 100", () => {
-      expect(is_leapyear(100)).toBe(false);
-    })
-    it("should return false for 1900", () => {
-      expect(is_leapyear(1900)).toBe(false);
+    it.each([[100], [1900]])('%s is not a leap year', (n) => {
+      expect(is_leapyear(n)).toBe(false);
     })
   })
   describe("year divisible by 4 is a leap year", () => {
-    it("should return false for 4", () => {
-      expect(is_leapyear(1996)).toBe(true);
-    })
-    it("should return false for 404", () => {
-      expect(is_leapyear(404)).toBe(true);
+    it.each([[404], [1996]])('%s is a leap year', (n) => {
+      expect(is_leapyear(n)).toBe(true);
     })
   })
   describe("year not divisible by 4 is not a leap year", () => {
