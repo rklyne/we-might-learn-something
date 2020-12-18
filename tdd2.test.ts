@@ -67,6 +67,11 @@ describe("a calculator", () => {
         expect(add('1\n6\n10\n3')).toBe(20);
     })
   })
+  describe("custom delimiters", () => {
+    it("should return 6 for '//;\n1;2\n3'", () => {
+      expect(add('//;\n1;2\n3')).toBe(6);
+    })
+  })
 });
 
 function add(text: string): number {
