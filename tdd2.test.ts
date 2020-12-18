@@ -25,6 +25,11 @@ describe("a calculator", () => {
       expect(add("10")).toBe(10);
     })
   })
+  describe("two numbers", () => {
+    it("should return 2 given 1,1", () => {
+      expect(add("1,1")).toBe(2);
+    })
+  })
 })
 
 function add(text: string): number {
