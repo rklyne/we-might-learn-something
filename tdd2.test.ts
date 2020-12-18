@@ -60,15 +60,15 @@ describe("a calculator", () => {
     it("should return 6 for '1\n2,3'", () => {
       expect(add('1\n2,3')).toBe(6);
     })
+    it("should return 1 for '1,\n'", () => {
+      expect(add('1,\n')).toBe(1);
+    })
   })
 });
 
 function add(text: string): number {
-  if (!text) {
-    return 0;
-  }
   return text
     .replace("\n", ',')
     .split(",")
-    .reduce((a: number, b: string) => a + parseFloat(b), 0);
+    .reduce((a: number, b: string) => a + parseFloat(b || 0), 0);
 }
