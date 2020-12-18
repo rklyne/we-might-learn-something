@@ -18,4 +18,5 @@ describe("a calculator", () => {
 
 
 function add(text: string): number {
+    return 0;
 }
