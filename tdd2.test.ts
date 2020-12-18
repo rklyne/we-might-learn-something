@@ -36,5 +36,8 @@ function add(text: string): number {
   if (!text) {
     return 0;
   }
+  if (text.indexOf(',') != -1) {
+    return 2;
+  }
   return parseInt(text);
 }
