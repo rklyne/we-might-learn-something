@@ -28,6 +28,7 @@ describe("a calculator", () => {
       expect(add("1.5")).toBe(1.5);
     });
   });
+
   describe("two numbers", () => {
     it("should return 2 given 1,1", () => {
       expect(add("1,1")).toBe(2);
@@ -57,5 +58,5 @@ function add(text: string): number {
   }
   return text
     .split(",")
-    .reduce((a: number, b: string) => a + parseInt(b), 0);
+    .reduce((a: number, b: string) => a + parseFloat(b), 0);
 }
