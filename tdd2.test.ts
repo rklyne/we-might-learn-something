@@ -56,6 +56,11 @@ describe("a calculator", () => {
       expect(add('1,'.repeat(4999)+'1')).toBe(5000);
     })
   })
+  describe("newline separated numbers", () => {
+    it("should return 6 for '1\n2,3'", () => {
+      expect(add('1\n2,3')).toBe(6);
+    })
+  })
 });
 
 function add(text: string): number {
