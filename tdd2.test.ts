@@ -71,7 +71,9 @@ describe("a calculator", () => {
     it("should return 6 for '//;\n1;2\n3'", () => {
       expect(add('//;\n1;2\n3')).toBe(6);
     })
-
+    it("should return 8 for '//;\n1;2\n5'", () => {
+        expect(add('//;?@\n1;?@2\n5')).toBe(8);
+    })
   })
 });
 
