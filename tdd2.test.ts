@@ -68,6 +68,7 @@ function add(text: string): number {
     return 0;
   }
   return text
+    .replace("\n", ',')
     .split(",")
     .reduce((a: number, b: string) => a + parseFloat(b), 0);
 }
