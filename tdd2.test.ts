@@ -71,12 +71,18 @@ describe("a calculator", () => {
     it("should return 6 for '//;\n1;2\n3'", () => {
       expect(add('//;\n1;2\n3')).toBe(6);
     })
+
   })
 });
 
 function add(text: string): number {
-  return text
-    .replace(/\n/g, ',')
-    .split(",")
+    let delimiter = ',';
+    if(text.indexOf('//') > -1) {
+        delimiter = text[2];
+        text = text.substr(4);
+    }
+    return text
+    .replace(/\n/g, delimiter)
+    .split(delimiter)
     .reduce((a: number, b: string) => a + parseFloat(b || '0'), 0);
 }
