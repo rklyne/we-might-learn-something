@@ -21,6 +21,9 @@ describe("a calculator", () => {
     it("should return 10 given 10", () => {
       expect(add("10")).toBe(10);
     });
+    it("should return -1 given -1", () => {
+      expect(add("-1")).toBe(-1);
+    });
   });
   describe("two numbers", () => {
     it("should return 2 given 1,1", () => {
