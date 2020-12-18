@@ -71,7 +71,7 @@ describe("a calculator", () => {
 
 function add(text: string): number {
   return text
-    .replace("\n", ',')
+    .replace(/\n/g, ',')
     .split(",")
     .reduce((a: number, b: string) => a + parseFloat(b || '0'), 0);
 }
