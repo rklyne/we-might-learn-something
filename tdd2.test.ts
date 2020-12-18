@@ -38,6 +38,11 @@ describe("a calculator", () => {
       expect(add('1,2,3,4,5')).toBe(15);
     })
   })
+  describe("5000 numbers", () => {
+    it("should return 5000 for '1,1,1,1,....'", () => {
+      expect(add('1,'.repeat(4999)+'1')).toBe(5000);
+    })
+  })
 });
 
 function add(text: string): number {
