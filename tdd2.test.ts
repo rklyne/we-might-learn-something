@@ -24,10 +24,9 @@ describe("a calculator", () => {
   })
 })
 
-
 function add(text: string): number {
-  if (text) {
-    return 1;
+  if (!text) {
+    return 0;
   }
-  return 0;
+  return parseInt(text);
 }
